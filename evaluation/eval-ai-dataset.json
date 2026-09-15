@@ -1,0 +1,31 @@
+/**
+ * evaluation/eval-ai-dataset.json
+ * 
+ * 실제 사례 기반 AI 모델 분류 및 근거 추출 평가용 데이터셋
+ */
+[
+  {
+    "id": "case-001",
+    "description": "명확한 추가 페이지 요청",
+    "baseline_text": "1. 작업 범위: 5개 반응형 페이지(홈, 소개, 서비스, 요금, 문의)\n2. 제외 사항: 목록 외 페이지는 별도 협의 대상입니다.\n3. 디자인 수정 포함(오탈자 및 기본 텍스트)",
+    "customer_message": "안녕하세요! 이번에 신규 런칭하는 가격 비교 페이지 추가가 급하게 필요한데 가능할까요?",
+    "expected_classification": "additional_candidate",
+    "expected_quote": "가격 비교 페이지 추가"
+  },
+  {
+    "id": "case-002",
+    "description": "모호한 디자인 구조 수정 요청",
+    "baseline_text": "1. 작업 범위: 웹사이트 디자인 및 제작\n2. 디자인 수정 포함",
+    "customer_message": "모바일 레이아웃 전체 구조를 그리드 형태로 전면 변경해주세요.",
+    "expected_classification": "needs_clarification",
+    "expected_quote": "모바일 레이아웃"
+  },
+  {
+    "id": "case-003",
+    "description": "기존 합의 범위 내 오탈자 수정",
+    "baseline_text": "1. 작업 범위: 5개 페이지\n2. 통상적 텍스트 및 디자인 수정 포함",
+    "customer_message": "홈 화면 두 번째 섹션의 오탈자와 텍스트 수정 부탁드립니다.",
+    "expected_classification": "included",
+    "expected_quote": "텍스트 수정"
+  }
+]
